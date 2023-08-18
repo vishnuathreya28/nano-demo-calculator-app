@@ -13,7 +13,12 @@ jobs:
       - name: Checkout user code
         uses: actions/checkout@v3
         with:
-          ref: node
-      - name: run tests
+          ref: ${{ github.ref }}   # Change 'node' to '${{ github.ref }}'
+          repository: vishnuathreya28/nano-demo-calculator-app
+
+      - name: Navigate to repo directory
+        run: cd nano-demo-calculator-app  # Change to your repository's directory
+
+      - name: Run tests
         run: |
           newman_collectionName=calculator-tests iterationCount=1 web_app_cpu='2' test_driver_cpu='2' docker-compose -f compose-file.yml up --exit-code-from test-driver --build
