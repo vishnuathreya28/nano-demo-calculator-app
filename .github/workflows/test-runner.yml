@@ -16,8 +16,8 @@ jobs:
           ref: ${{ github.ref }}   # Change 'node' to '${{ github.ref }}'
           repository: vishnuathreya28/nano-demo-calculator-app
 
-      - name: Navigate to repo directory
-        run: cd nano-demo-calculator-app  # Change to your repository's directory
+      # - name: Navigate to repo directory
+      #   run: cd nano-demo-calculator-app  # Change to your repository's directory
 
       - name: Run tests
         run: |
