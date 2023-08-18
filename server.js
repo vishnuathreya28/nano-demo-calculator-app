@@ -11,7 +11,7 @@ const baseRouter = express.Router();
 
 baseRouter.get('/greeting', (req, res) => {
     // console.log("yes API is working");
-    return res.send('');
+    return res.send('Hello world!');
 });
 
 baseRouter.post('/add', (req, res) => {
